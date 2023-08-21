@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.inputC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+}
+.search {
+    width: 500px; /*length of search box*/
+}
+.search input[type="text"] {
+    width: 100%;
+    height: 57px; /*height of search box*/
+    font-size: 22px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.search input[type="text"]::placeholder {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-size: 22px;
+    text-indent: 10px;
+    padding-left: 5px;
+}
+.container {
+    width: 1675px;
+    height: 980px;
+    /* padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    /* max-width: 600px;
+    margin: 0 auto;
+    text-align: center; */
+}
+/* .weather-data {
+    margin-top: 20px;
+} */
+.weather-details {
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-left: 300px;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* position: relative; */
+    /* background-color: #f7f7f7; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+#weatherIcon {
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+#temperature {
+    margin-left: 12px;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+#weatherType {
+    margin-left: 12px;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+hr {
+    margin-top: 14px;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color: #333;
+    margin-left: 11px;
+}
+#cityName img {
+    margin-top: 30px;
+    margin-left: 16px;
+}
+#cityName {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 19px;
+}
+#dateTime img {
+    margin-top: 30px;
+    margin-left: 16px;
+}
+#dateTime {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+.location-info p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.atmospheric-conditions {
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* background-color: #f7f7f7; */
+    /* display: block; */
+    margin-left: 300px;
+    margin-top: 0px;
+    width: 470px;
+}
+.atmospheric-conditions h2 {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+.one {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 5px;
+}
+#humidity {
+    font-size: 28px;
+}
+.humid {
+    font-size: 17px;
+    margin-left: 59px;
+}
+.two {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: -56px;
+}
+#windSpeed {
+    font-size: 26px;
+}
+.wind-speed {
+    font-size: 17px;
+    margin-left: 315px;
+}
+.temperature {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* background-color: #f7f7f7; */
+    display: inline-block;
+    width: 470px;
+    margin-left: 300px;
+}
+.temperature h3 {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.three {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 5px;
+}
+#minMaxTemp {
+    font-size: 28px;
+}
+.min-max {
+    font-size: 17px;
+    margin-left: 59px;
+}
+.four {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: -56px;
+}
+/* .four img {
+    margin-top: -20px;
+    margin-right: 20px;
+
+} */
+#feelsLike {
+    font-size: 28px;
+}
+.feels-like {
+    font-size: 17px;
+    margin-left: 315px;
+}
+.rise-set {
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* background-color: #f7f7f7; */
+    display: inline-block;
+    width: 450px;
+}
+.rise-set h4 {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+.five {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 5px;
+}
+#sunrise {
+    font-size: 28px;
+}
+.sun-rise {
+    font-size: 17px;
+    margin-left: 59px;
+}
+.six {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: -56px;
+}
+#sunset {
+    font-size: 28px;
+}
+.sun-set {
+    font-size: 17px;
+    margin-left: 315px;
+}
+.forecast{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 800px;
+    bottom: 450px;
+    width: 700px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.forecast h1 {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.forecast-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.hourly-forecast-chart {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 10px;
+    bottom: 470px;
+    right: 462px;
+    width: 700px;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.forecast-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 20px;
+    /* border: 1px solid #ccc; Add a border around each forecast item */
+}
+
+.weather-details {
+    margin-top: 20px;
+}
+
+.current-weather p {
+    margin: 5px 0;
+}
+#weatherType {
+    text-transform: capitalize;
+}
