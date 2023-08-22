@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Weather Details</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
 </head>
+
 <body>
     <div class="container">
         <div class="weather-data">
             <!-- <button id="toggleUnits">Toggle Units</button> -->
 
             <div class="weather-details">
-                <div id="weatherIcon"></div>
+                <div id="weatherIcon"> </div>
                 <p> <span id="temperature"></span></p>
                 <p> <span id="weatherType"></span></p>
                 <hr style="width:95%">
@@ -22,87 +24,85 @@
             </div>
 
             <div class="forecast">
-                <div>
+                <div class="day-forecast-chart">
                     <h1>5-day forecast</h1>
                     <div class="forecast-container" id="fiveDayForecastContainer"></div>
                 </div>
+
+                <div class="hourly-forecast-chart">
+                    <canvas id="hourlyChart"></canvas>
+                </div>
+
             </div>
-
-            <div class="hourly-forecast-chart">
-                <canvas id="hourlyChart"></canvas>
-            </div>
-
-            <div class="atmospheric-conditions">
-                <h2>Atmospheric conditions</h2>
-                <div>
-                    <p class="one">
-                        <img src="images/humidity.png">
-                        <span id="humidity"> </span>
-                    </p>
-                    <p class="humid">Humidity</p>
-                </div>
-                <div>
-                    <p class="two">
-                        <img src="images/wind_speed.png">
-                        <span id="windSpeed"></span>
-                    </p>
-                    <p class="wind-speed">Wind Speed</p>
-                </div>
-            </div>
-
-            <div class="temperature">
-                <h3>Temperature</h3>
-                <div>
-                    <p class="three">
-                        <img src="images/min-max.png">
-                        <span id="minMaxTemp"> </span>
-                    </p>
-                    <p class="min-max">Min/Max</p>
-                </div>
-                <div>
-                   <p class="four">
-                        <img src="images/feels_like.png">
-                        <span id="feelsLike"> </span>
-                    </p>
-                    <p class="feels-like">Feels Like</p>
-                </div>
-            </div>
-
-            <div class="rise-set">
-                <h4>Sun Time</h4>
-                <div>
-                    <p class="five">
-                        <img src="images/sunrise.png">
-                        <span id="sunrise"> </span>
-                    </p>
-                    <p class="sun-rise">Sunrise</p>
-                </div>
-                <div>
-                    <p class="six">
-                        <img src="images/sunset.png">
-                        <span id="sunset"> </span>
-                    </p>
-                    <p class="sun-set">Sunset</p>
-                </div>
-            </div>
-
-            <div id="mapContainer" class="map-container"></div>
-
         </div>
-    </div>
-        
 
-        <!-- <p>UV Index: <span id="uvIndex"></span></p> -->
-        <!-- <p>Date and Time: <span id="dateTime"></span></p>
+
+        <div class="atmospheric-conditions">
+            <h2>Atmospheric conditions</h2>
+            <div>
+                <p class="one">
+                    <img src="images/humidity.png">
+                    <span id="humidity"> </span>
+                </p>
+                <p class="humid">Humidity</p>
+            </div>
+            <div>
+                <p class="two"> <img src="images/wind_speed.png">
+                    <span id="windSpeed"></span>
+                </p>
+                <p class="wind-speed">Wind Speed</p>
+            </div>
+        </div>
+
+        <div class="temperature">
+            <h3>Temperature</h3>
+            <div>
+                <p class="three">
+                    <img src="images/min-max.png">
+                    <span id="minMaxTemp"> </span>
+                </p>
+                <p class="min-max">Min/Max</p>
+            </div>
+            <div>
+                <p class="four">
+                    <img src="images/feels_like.png">
+                    <span id="feelsLike"> </span>
+                </p>
+                <p class="feels-like">Feels Like</p>
+            </div>
+        </div>
+
+        <div class="rise-set">
+            <h4>Sunrise/Sunset</h4>
+            <div class="rise-div">
+                <p class="five">
+                    <img src="images/sunrise.png">
+                    <span id="sunrise"> </span>
+                </p>
+                <!-- <p class="sun-rise">Sunrise</p> -->
+            </div>
+            <div class="set-div">
+                <p class="six">
+                    <img src="images/sunset.png">
+                    <span id="sunset"> </span>
+                </p>
+                <!-- <p class="sun-set">Sunset</p> -->
+            </div>
+        </div>
+
+        <div id="mapContainer" class="map-container"></div>
+
+        <!-- </div> -->
+    </div>
+
+
+    <!-- <p>UV Index: <span id="uvIndex"></span></p> -->
+    <!-- <p>Date and Time: <span id="dateTime"></span></p>
         <p>Weather Type: <span id="weatherType"></span></p> -->
-
-
-        </div>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -9,24 +9,46 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* ________________________Homepage container_______________________________*/
+
+.main-container{
+    height: 100vh; 
+    width: 100%;
+    padding: 50px;
+
+}
+
+
+
 .inputC {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 65vh;
+
 }
+
+#cityInput{
+    cursor: pointer;
+    border-radius: 20px;
+    border:none;
+}
+
 .search {
-    width: 500px; /*length of search box*/
+    width: 650px; /*length of search box*/
 }
+
+
 .search input[type="text"] {
     width: 100%;
     height: 57px; /*height of search box*/
     font-size: 22px;
-    border: none;
     outline: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .search input[type="text"]::placeholder {
     font-family: Arial, sans-serif;
     color: #000000;
@@ -34,24 +56,33 @@ body {
     text-indent: 10px;
     padding-left: 5px;
 }
-.container {
-    width: 1675px;
-    height: 980px;
+
+
+
+/* __________________________Weather Details Section___________________________________________ */
+
+/* .container { */
+    /* width: 100%; */
+    /* height: 100vh; */
     /* padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     /* max-width: 600px;
     margin: 0 auto;
     text-align: center; */
+/* } */
+
+
+.weather-data {
+    margin-top: 30px;
+    display: flex;
 }
-/* .weather-data {
-    margin-top: 20px;
-} */
 .weather-details {
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 2px solid black;
     padding: 8px;
     margin-left: 300px;
-    height: 450px;
+    /* margin-bottom: 50px; */
+    height: 460px;
     width: 450px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -61,15 +92,24 @@ body {
     flex-direction: column;
     justify-content: flex-end; */
 }
+
 #weatherIcon {
-    font-size: 70px;
-    margin-bottom: 20px;
+    margin-top:30px;
+    position: relative; 
+    right:5px;
+    /* font-size: 50px; */
+  
+    margin-bottom: 30px;
     margin-left: 10px;
+}
+#weatherIcon img{
+    height: 110px;
+    width:110px;
 }
 #temperature {
     margin-left: 12px;
     font-size: 55px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 #weatherType {
     margin-left: 12px;
@@ -103,6 +143,7 @@ hr {
 .location-info p {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left:15px;
 }
 .atmospheric-conditions {
     flex-direction: column;
@@ -113,7 +154,7 @@ hr {
     /* background-color: #f7f7f7; */
     /* display: block; */
     margin-left: 300px;
-    margin-top: 0px;
+    margin-top: 150px;
     width: 470px;
 }
 .atmospheric-conditions h2 {
@@ -205,15 +246,19 @@ hr {
     font-size: 17px;
     margin-left: 315px;
 }
+
 .rise-set {
-    flex-direction: column;
+    height: 200px;
+    position: relative;
+    bottom: 140px;
+    margin-left: 20px;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     /* background-color: #f7f7f7; */
     display: inline-block;
-    width: 450px;
+    width: 265px;
 }
 .rise-set h4 {
     text-align: center;
@@ -223,6 +268,13 @@ hr {
     margin-bottom: 10px;
     display: block;
 }
+.rise-div , 
+.set-div{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .five {
     display: flex;
     flex-direction: row;
@@ -238,10 +290,10 @@ hr {
 }
 .six {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: row;
     gap: 5px;
-    margin-top: -56px;
+    margin-top: -37px;
 }
 #sunset {
     font-size: 28px;
@@ -251,18 +303,26 @@ hr {
     margin-left: 315px;
 }
 .forecast{
+    height: 460px;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
     margin-top: 4px;
     margin-left: 800px;
-    bottom: 450px;
+    bottom: 489px;
     width: 700px;
     padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
 }
+
+.day-forecast-chart{
+    margin-right: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+
 .forecast h1 {
     text-align: left;
     margin-left: 10px;
@@ -286,12 +346,13 @@ hr {
 .hourly-forecast-chart {
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    position: absolute;
-    margin-top: 10px;
-    bottom: 470px;
-    right: 462px;
+    /* position: absolute; */
+    border-radius: 10px;
+    margin-top: 55px;
+    /* bottom: 470px; */
+    /* right: 462px; */
     width: 700px;
     height: 200px;
     padding: 10px;
